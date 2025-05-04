@@ -311,7 +311,7 @@ void CCompositor::initServer(std::string socketName, int socketFd) {
         Debug::m_trace = true;
 
     // set the buffer size to 1MB to avoid disconnects due to an app hanging for a short while
-    wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
+    //wl_display_set_default_max_buffer_size(m_wlDisplay, 1_MB);
 
     Aquamarine::SBackendOptions options{};
     options.logFunction = aqLog;

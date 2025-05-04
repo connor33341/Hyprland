@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
+set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_EXTENSIONS ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Get version
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" VER_RAW)
@@ -12,6 +15,7 @@ project(
 include(CheckIncludeFile)
 include(GNUInstallDirs)
 
+#target_compile_features(Hyprland PUBLIC cxx_std_14)
 set(HYPRLAND_VERSION ${VER})
 set(PREFIX ${CMAKE_INSTALL_PREFIX})
 set(INCLUDEDIR ${CMAKE_INSTALL_INCLUDEDIR})
